@@ -18,19 +18,21 @@ function App() {
       .split(",")
   )
   const [info, setInfo] = useState("")
-  const [nrImage,setNrImage]=useState(5)
+  const [nrImage, setNrImage] = useState(5)
 
   const displayLetter = (e) => {
-    if(!currentPassword.includes(e.target.innerHTML)){
-      setNrImage(nrImage+1);
-      if(nrImage===9){
-        setInfo('Game over')
+    if (!currentPassword.includes(e.target.innerHTML)) {
+      setNrImage(nrImage + 1)
+      if (nrImage === 9) {
+        setInfo(`Game over! password is:  ${currentPassword}`)
+
         setTimeout(() => {
           window.location.reload()
-        }, 2000)
+        }, 3000)
       }
     }
-    e.target.style.color='red'
+    e.target.style.color = "red"
+    e.target.style.opacity = "0.5"
     const indices = currentPassword
       .split("")
       .map((el, i) => (el === e.target.innerHTML ? i : ""))
@@ -52,8 +54,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hangman</h1>
-      <h2>{info}</h2>
+      <h1 className={"h1"}>Hangman-PL</h1>
+      <h2 className={"h2"}>{info}</h2>
       <WrapperPasswordGenerator
         password={currentPassword}
         children={secretPassword}

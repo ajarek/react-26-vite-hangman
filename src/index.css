@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 body{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   background:
   radial-gradient(
     110.35% 80.79% at 6% 103.92%,

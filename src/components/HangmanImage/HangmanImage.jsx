@@ -1,20 +1,19 @@
-import React from 'react'
+import React from "react"
 
-import classes from './styles.module.css'
+import classes from "./styles.module.css"
 
 export const HangmanImage = (props) => {
-  const {
-    className,
-    numer,
-    ...otherProps
-  } = props
+  const { className, numer, ...otherProps } = props
 
   return (
     <div
-      className={`${classes.root}${className ? ` ${className}` : ''}`}
+      className={`${classes.root}${className ? ` ${className}` : ""}`}
       {...otherProps}
     >
-      <img src={`src/assets/images/${numer}.jpg`}/>
+      <img
+        src={`src/assets/images/${numer}.jpg`}
+        className={classes.img}
+      />
     </div>
   )
 }

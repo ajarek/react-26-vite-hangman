@@ -13,8 +13,8 @@ export const WrapperPasswordGenerator = (props) => {
       className={`${classes.root}${className ? ` ${className}` : ''}`}
       {...otherProps}
     >
-{children}
-   
+      {children}
+
 
     </div>
   )
